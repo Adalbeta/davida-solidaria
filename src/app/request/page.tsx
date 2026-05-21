@@ -54,11 +54,11 @@ export default function RequestForm() {
 
     try {
       await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ASSOCIATION!,
-        templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-      );
+  process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+  process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+  templateParams,
+  process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+);
       setStatus("success");
       setFormData({
         fullname: "", email: "", phone: "", location: "", need_type: "medical", description: "",
@@ -67,7 +67,7 @@ export default function RequestForm() {
       if (recaptchaRef.current) recaptchaRef.current.reset();
       setCaptchaValue(null);
     } catch (error) {
-      console.error("EmailJS Error:", error);
+      console.error("EmailJS Error:", JSON.stringify(error, null, 2));
       setStatus("error");
     }
   };
