@@ -73,7 +73,7 @@ export default function Contact() {
             <p style={{ color: "var(--text-muted)", marginBottom: "2rem" }}>
               Precisa de resposta rápida? Fale connosco diretamente pelo WhatsApp.
             </p>
-            <a href="https://wa.me/351912345678" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: "var(--success)", color: "white", width: "100%", marginBottom: "1rem" }}>
+            <a href="https://wa.me/447418375239" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: "var(--success)", color: "white", width: "100%", marginBottom: "1rem" }}>
               <MessageCircle size={20} />
               {t("contact.whatsapp_btn")}
             </a>
